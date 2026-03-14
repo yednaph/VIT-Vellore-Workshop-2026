@@ -1,0 +1,6 @@
+ 
+ &PROJWFC
+   prefix= 'silicon',
+   outdir= './',
+   filpdos= 'pdos.dat'
+ /
