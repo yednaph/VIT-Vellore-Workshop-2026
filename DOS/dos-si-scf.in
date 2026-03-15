@@ -19,7 +19,7 @@
 
 &electrons
     conv_thr=1e-8
-    beta_mixing = 0.6
+    mixing_beta= 0.6
 /
 
 ATOMIC_SPECIES
