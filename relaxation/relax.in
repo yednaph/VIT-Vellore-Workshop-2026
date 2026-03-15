@@ -1,37 +1,42 @@
 &control
-    calculation = 'relax'
-    prefix = 'silicon'
-    outdir = './tmp/'
-    pseudo_dir ='/home/karan/pseudos'
-    etot_conv_thr = 1e-5
-    forc_conv_thr = 1e-4
+    calculation='vc-relax'
+    restart_mode='from_scratch'
+    pseudo_dir = '/home/hp/Desktop/test'
+    outdir='./'
+    disk_io='none'
+    tstress=.true.
+    tprnfor=.true.
+    etot_conv_thr=1.0d-05
+    forc_conv_thr=1.0d-04
 /
 
 &system
-    ibrav=2, celldm(1) =10.35,
-    nat=2, ntyp=1,
-    ecutwfc=30
+    ibrav=2
+!   #a=5.4310
+    celldm(1)=10.4
+    nat=2
+    ntyp=1
+    nbnd=8
+    ecutwfc=60.0
+    
+/
+ &electrons
+    conv_thr = 2.0d-8
+    mixing_beta = 0.7
 /
 
-&electrons
-    conv_thr=1e-8
+   &ions
 /
-
-&ions
+ 
+  &cell
+  cell_dofree = ibrav   
 /
-
-&cell
-    cell_dofree='ibrav'
-/
-
 ATOMIC_SPECIES
-  Si  28.0855  Si.pbe-n-kjpaw_psl.1.0.0.UPF
-
-ATOMIC_POSITIONS (alat)
- Si 0.0 0.0 0.0
- Si 0.25 0.25 0.25
-
-K_POINTS (automatic)
-  6 6 6 1 1 1
-
-
+  Si  28.085  Si.pbe-n-kjpaw_psl.1.0.0.UPF
+  
+ATOMIC_POSITIONS {crystal}
+  Si  0.00    0.00  0.00
+  Si  0.25    0.25  0.25
+  
+K_POINTS {automatic}
+ 8 8 8 1 1 1
