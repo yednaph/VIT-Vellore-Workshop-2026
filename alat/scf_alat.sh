@@ -1,7 +1,6 @@
 ##!/bin/bash
 
-# This bash script will optimize the lattice constant of 
-# cubic crystals scanning from -5% to +5 % of the experimental value 5.4310 Angstrom at a step of 0.005
+# This bash script will optimize the lattice constant of cubic crystals scanning from -5% to +5 % of the experimental value 5.4310 Angstrom at a step of 0.005
 
 rm -rf etot.dat stress.dat
 for k in {0..20}
@@ -43,8 +42,8 @@ ATOMIC_POSITIONS {crystal}
 K_POINTS {automatic}
  8 8 8 1 1 1
 EOF
-mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
-
+# mpirun -np 4 pw.x -nk 1 -npw 4 -inp scf.in > scf.out
+mpirun -np 4 pw.x < scf.in > scf.out
 
 te=`grep ! scf.out | tail -1 | awk '{print $5}'`
 #ft=`grep 'l fo' scf.out|awk '{print $4}'`
