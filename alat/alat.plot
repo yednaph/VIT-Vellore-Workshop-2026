@@ -1,5 +1,4 @@
-# This gnuplot script will plot the total energy vs
-# lattice constant for the data generated from alat.sh script.
+# This gnuplot script will plot the total energy vs attice constant for the data generated from alat.sh script.
 
 # set terminal type
 set term postscript enhanced color 'Helvetica-Bold,16'
