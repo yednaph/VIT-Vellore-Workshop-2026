@@ -10,7 +10,7 @@
 
 &system
     ibrav=2,
-    celldm(1) =10.35,
+    celldm(1) =10.2076,
     nat=2,
     ntyp=1,
     ecutwfc=50
@@ -24,11 +24,11 @@
 /
 
 ATOMIC_SPECIES
-  Si  28.0855  Si.pbe-n-kjpaw_psl.1.0.0.UPF
+  Si  28.0855  Si.pz-vbc.UPF
 
 ATOMIC_POSITIONS (alat)
 Si            0.0000000000        0.0000000000        0.0000000000
 Si            0.2500000000        0.2500000000        0.2500000000
 
 K_POINTS (automatic)
-  20 20 20 0 0 0
+ 12 12 12 0 0 0
