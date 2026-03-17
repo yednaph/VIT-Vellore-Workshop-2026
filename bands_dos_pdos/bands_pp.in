@@ -1,5 +1,0 @@
-&BANDS
-  prefix = 'silicon'
-  outdir = './'
-  filband = 'si_bands.dat'
-/
