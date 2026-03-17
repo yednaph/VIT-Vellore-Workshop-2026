@@ -1,6 +1,0 @@
-&INPUT
-fildyn = 'silicon.dyn'
-zasr = 'simple'
-flfrc = 'silicon.fc'
-loto_2d=.true.
-/
